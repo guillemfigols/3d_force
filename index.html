@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style> body { margin: 0px; } </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Prova amb 3d-force-graph</title>
+    <script src="//unpkg.com/3d-force-graph"></script>
+    <script src="jquery-3.6.0.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="3d-graph"></div>
+    <div class="graph-data">
+
+        <ul>
+            <li><button class="toggle-data-btn" onClick="toggleData()">Reload</button></li>
+            <li><button class="modal-btn">Load data</button></li>
+        </ul>
+
+        <div class="modal-bg">
+            <div class="modal">
+                <h2>Load Data</h2>
+                <p>Please load a .json file with the following syntax:</p>
+                <div class="syntax">{
+    "nodes":[
+        {"id":1, "group":1},
+        {"id":2, "group":2},
+        ...
+    ],
+    "links":[
+        {"source":1, "target":2},
+        ...
+    ]
+}</div>
+                <input type="file"/>
+                <p>Once you've loaded your data, close this window <br>
+                and click the "Reload" button to show your graph.</p>
+                <span class="modal-close">X</span>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="codi.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
