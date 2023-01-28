@@ -5,22 +5,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>3D FORCE</title>
-    <script src="//unpkg.com/3d-force-graph"></script>
-    <script src="jquery-3.6.0.js"></script>
     <script src="//unpkg.com/three"></script>
-    <script src="//unpkg.com/three/examples/js/renderers/CSS2DRenderer.js"></script>
+    <script src="//unpkg.com/three-spritetext"></script>
+    <script src="//unpkg.com/3d-force-graph"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="sidebar">
+        <div class="links">
+            <ul>
+                <li style="padding-right: 1em;"><button class="toggle-data-btn" onClick="toggleData()">Reload</button></li>
+                <li><button class="modal-btn" style="margin-right: 0.5em;">Load data</button></li>
+                <li><input type="checkbox" id ="my-checkbox" onclick="isChecked()">Node labels</li>
+                <label for="q_x" style="padding-left: 1em; padding-right: 0.3em;">Cube</label>
+                <li><input type="text" id = "q_x" name="q_x"></li>
+                <label for="esfera" style="padding-left: 1em; padding-right: 0.3em;">Sphere</label>
+                <li><input type="text" id = "esfera" name = "esfera"></li>
+                <li><input type="button" id = "esborra" value="Delete last object" style="margin-left: 0.5em; margin-right: 0.5em;"></li>
+                <li><input type="button" id = "esquerra" value="↶"></li>
+                <li><input type="button" id = "amunt" value="↑"></li>
+                <li><input type="button" id = "avall" value="↓"></li>
+                <li><input type="button" id = "dreta" value="↷"></li>
+            </ul>
+        </div>
+    </div>
+
     <div id="3d-graph"></div>
     <div class="graph-data">
-
-        <ul>
-            <li><button class="toggle-data-btn" onClick="toggleData()">Reload</button></li>
-            <li><button class="modal-btn">Load data</button></li>
-            <li><input type="checkbox" id="my-checkbox" onclick="isChecked()">Node labels</li>
-        </ul>
-
         <div class="modal-bg">
             <div class="modal">
                 <h2>Load Data</h2>
